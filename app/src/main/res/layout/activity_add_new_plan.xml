@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:padding="7dp"
+    android:background="@drawable/bg_gradient_new"
+    tools:context=".addNewPlanActivity">
+
+    <include
+        android:id="@+id/add_work_toolbar_id"
+        layout="@layout/add_work_tool_bar"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_addWork"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout_addWork">
+
+    </include>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_addWork"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_work_toolbar_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/add_work_toolbar_id">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <EditText
+                android:id="@+id/editText_workName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/work_name"
+                android:inputType="text"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textColorHint="@color/colorhint"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorhint"
+                android:ems="10"
+                android:cursorVisible="true">
+
+            </EditText>
+            <EditText
+                android:id="@+id/editText_Content"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="@string/content"
+                android:cursorVisible="true"
+                android:inputType="textMultiLine"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/colorhint"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:backgroundTint="@color/colorhint"
+                android:ems="10"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:paddingTop="10dp"
+
+                >
+
+            </EditText>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/work_type"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    />
+                <Spinner
+                    android:id="@+id/spinnerWork"
+                    android:layout_width="200dp"
+                    android:layout_height="70dp"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    style="@style/ThemeOverlay.AppCompat.DayNight"
+                    android:backgroundTint="@color/colorhint"
+                    >
+                </Spinner>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_daily_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_daily_time"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableLeft="@drawable/ic_time_clock"
+                android:text=" At : "
+                android:drawablePadding="10dp"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_daily_time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:visibility="gone"
+            android:layout_gravity="bottom">
+
+            <TimePicker
+                android:id="@+id/timePicker_daily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                android:layout_gravity="bottom"
+                android:background="@drawable/round_bg"
+                style="@style/MyTimePickerDialogTheme"
+                >
+            </TimePicker>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_oneTime_day_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_oneTime_day"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableLeft="@drawable/ic_one_day"
+                android:text=" Day : "
+                android:drawablePadding="10dp"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_oneTime_time_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_oneTime_time"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableLeft="@drawable/ic_time_clock"
+                android:text=" At : "
+                android:drawablePadding="10dp"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+        </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_oneTime_timepicker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:visibility="gone"
+
+            android:layout_gravity="bottom">
+
+            <TimePicker
+                android:id="@+id/timePicker_oneTime"
+                android:background="@drawable/round_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                android:layout_gravity="bottom"
+                style="@style/MyTimePickerDialogTheme"
+                >
+            </TimePicker>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+        <LinearLayout
+           android:id="@+id/layout_oneTime_datePicker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:visibility="gone"
+
+            android:layout_gravity="bottom">
+            <DatePicker
+               android:id="@+id/datePicker_oneTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:background="@drawable/round_bg"
+                android:layout_gravity="bottom"
+                android:calendarViewShown="false"
+                style="@style/MyTimePickerDialogTheme"
+
+                >
+            </DatePicker>
+
+        </LinearLayout>
+
+
+
+                <!--///////WEEKLY////////////-->
+
+        <LinearLayout
+
+            android:id="@+id/layout_week_day_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_week_day"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableLeft="@drawable/ic_week_calender"
+                android:text="@string/day"
+                android:drawablePadding="10dp"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_week_days"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btnMonday"
+                    android:onClick="buttonOnClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="MONDAY"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:textAllCaps="true"
+                    android:background="@drawable/roundbutton"
+                    android:textColor="@color/colorPrimaryDark"
+                    >
+
+                </Button>
+                <Button
+                    android:id="@+id/btnTuesday"
+                    android:onClick="buttonOnClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="TUESDAY"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:textAllCaps="true"
+                    android:background="@drawable/roundbutton"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginLeft="3dp"
+                    >
+
+                </Button>
+                <Button
+                    android:id="@+id/btnWednesday"
+                    android:onClick="buttonOnClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="WEDNESDAY"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:textAllCaps="true"
+                    android:background="@drawable/roundbutton"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginLeft="3dp">
+
+                </Button>
+                <Button
+                    android:id="@+id/btnThursday"
+                    android:onClick="buttonOnClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="THURSDAY"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:textAllCaps="true"
+                    android:background="@drawable/roundbutton"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginLeft="3dp">
+
+                </Button>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btnFriday"
+                    android:onClick="buttonOnClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="FRIDAY"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textAllCaps="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/roundbutton"
+                    android:textColor="@color/colorPrimaryDark"
+                    >
+
+                </Button>
+                <Button
+                    android:id="@+id/btnSaturday"
+                    android:onClick="buttonOnClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="SATURDAY"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:textAllCaps="true"
+                    android:background="@drawable/roundbutton"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginLeft="3dp"
+                    >
+
+                </Button>
+                <Button
+                    android:id="@+id/btnSunday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="SUNDAY"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:textAllCaps="true"
+                    android:onClick="buttonOnClick"
+                    android:background="@drawable/roundbutton"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginLeft="3dp">
+
+                </Button>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:id="@+id/layout_week_time_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_week_time"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableLeft="@drawable/ic_time_clock"
+                android:text="@string/at"
+                android:drawablePadding="10dp"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+        </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_week_timepicker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:visibility="gone"
+            android:layout_gravity="bottom">
+
+            <TimePicker
+                android:id="@+id/timePicker_week"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                android:background="@drawable/round_bg"
+                android:layout_gravity="bottom"
+                style="@style/MyTimePickerDialogTheme"
+                >
+            </TimePicker>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

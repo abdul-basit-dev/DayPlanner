@@ -1,0 +1,46 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:datePickerStyle">@style/MyTimePickerDialogTheme</item>
+    </style>
+
+
+    <style name="MyTimePickerDialogTheme" parent="android:Theme.Material.Light" tools:targetApi="lollipop">
+        <item name="android:headerBackground">@color/colorAccent</item>
+        <item name="android:calendarTextColor">@color/colorAccent</item>
+        <item name="android:dayOfWeekBackground">@color/colorAccent</item>
+        <item name="android:yearListSelectorColor">@color/colorAccent</item>
+        <item name="android:datePickerMode">calendar</item>
+        <item name="android:minDate">01/01/2000</item>
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+    </style>
+
+
+    <style name="PreferencesTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_gradient_new</item>
+
+        <item name="android:textColor">@color/colorListView</item>
+
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="textAppearanceCaption">@color/colorListView</item>
+        <item name="textAppearanceBody1">@color/colorListView</item>
+        <item name="textAppearanceBody2">@color/colorListView</item>
+        <item name="textAppearanceHeadline1">@color/colorListView</item>
+        <item name="textAppearanceHeadline2">@color/colorListView</item>
+        <item name="textAppearanceHeadline3">@color/colorListView</item>
+        <item name="textAppearanceHeadline4">@color/colorListView</item>
+        <item name="android:textColorHint">@color/colorListView</item>
+        <item name="textAppearanceSubtitle1">@color/colorListView</item>
+        <item name="textAppearanceSubtitle2">@color/colorListView</item>
+        <item name="helperTextTextColor">@color/colorListView</item>
+        <item name="android:textColorPrimary">@color/colorListView</item>
+        <item name="android:textColorSecondary">@color/colorListView</item>
+    </style>
+
+</resources>

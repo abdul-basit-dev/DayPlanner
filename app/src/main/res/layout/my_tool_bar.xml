@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar android:id="@+id/my_toolbar_id"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:background="@android:color/transparent"
+    app:titleTextColor="@android:color/white"
+    app:contentInsetStart="0dp"
+    app:contentInsetLeft="0dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_weight="1">
+
+
+    <ImageView
+        android:id="@+id/ivAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.5"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:background="@drawable/bg_ripple"
+        app:srcCompat="@drawable/ic_add"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Day Planner"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_weight="2"
+        android:id="@+id/toolbar_title" />
+
+    <ImageView
+        android:id="@+id/ivSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.5"
+        android:background="@drawable/bg_ripple"
+        app:srcCompat="@drawable/ic_more_set"
+       />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="3"
+        android:layout_weight="1">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/my_bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@android:color/transparent"
+            app:elevation="0dp"
+            android:layout_weight="3"
+            app:itemTextColor="@android:color/white"
+            app:labelVisibilityMode="labeled"
+            app:itemIconTint="@drawable/selector"
+            app:menu="@menu/bottom_navigation_menu" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/colorGolden"/>
+    </LinearLayout>
+</LinearLayout>
+</androidx.appcompat.widget.Toolbar>
+
+
+
+
+
+
