@@ -10,8 +10,8 @@ Alarm manager serves the duty of notifying user about thier schedule work.
 ## Add Weekely Work 
 <img src="images/screenshot2.png" alt="drawing" width="200"/>
 
-## Viewing Daily schedule 
-<img src="images/screenshot1.png" alt="drawing" width="200"/>  <img src="images/screenshot1.png" alt="drawing" width="200"/>
+## Viewing Work schedule 
+<img src="images/screenshot1.png" alt="drawing" width="200"/>  <img src="images/screenshot5.png" alt="drawing" width="200"/>
 
 ## Edit Work
 A longClicklistener() has been implemented on recyler view which displays a menu to edit the work.
