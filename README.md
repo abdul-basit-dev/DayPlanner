@@ -1,8 +1,8 @@
 # DayPlanner
-This app is a simple TODO Planner app. User can schedule work and app reminds user by notifying at particular time.
+Its a Day Planner App that lets user to create tasks for his daily routine. User can create daily, weekely and one time reminder tasks.
 
 ### SQL
-This app has been developed using SQLHELPER for android.
+This app has was developed on Android Studio using SQLite as database.
 
 ## Alarm and Notifications
 Alarm manager serves the duty of notifying user about thier schedule work.
